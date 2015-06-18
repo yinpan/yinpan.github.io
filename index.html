@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="short icon" href="img/gt_favicon.png">
+	<title>Yinpan | Site</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="menubox">
+		<div class="bar">
+			<ul>
+				<li><a href="http://yinpan.work"><img src="img/home.png" alt="..." title="yinpan.work"></a></li>
+				<li><a href="http://yinpan.work/blog"><img src="img/blog.png" alt="..." title="我的博客"></a></li>
+				<li><a href="http://yinpan.work/sfz"><img src="img/find.png" alt="识别身份证编码" title="识别身份证编码"></a></li>
+				<li><a href="http://yinpan.work/rs"><img src="img/online.png" alt="..." title="在线遥感课程"></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="main">
+		<div class="menu">
+			<div class="i i_top"></div>
+			<div class="i i_center"></div>
+			<div class="i i_bottom"></div>
+		</div>
+		<div class="contain">
+			<div class="about">
+				<div class="head">
+					<img src="img/me.jpg" alt="...">
+					<a href="#">秋月白</a>
+					<span>21 old</span>
+				</div>
+				<div class="talk">
+					<h3>关于我\(^o^)/~</h3>
+					<br>
+					<h4>My Site:<a href="http://yinpan.work" title="my site">http://yinpan.work</a></h4>
+				</div>
+				<div class="follow">
+					<ul>
+						<li><a href="http://weibo.com/yinpan93"><i class="icon-weibo" title="Follow me on Weibo"><img src="img/sina.png"></i></a></li>
+						<li><a href="#"><i class="icon-qq" title="Follow me on QQ"><img src="img/qq.png" height="48" width="48"></i></a></li>
+						<li><a href="http://yinpan.github.com"><i class="icon-github" title="Follow me on GitHub"><img src="img/githubcolor.png"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="project">
+				<div class="lastest"><h3>Lastest Project</h3></div>
+				<div class="list">
+					<ul>
+						<li class="icon-sfz">
+							<a href="http:yinpan.work/sfz">
+								<h4>识别身份证编码</h4>
+								<span>2015.6.15</span>
+							</a>
+						</li>
+						<li class="icon-blog">
+							<a href="http:yinpan.work/blog">
+								<h4>Blog</h4>
+								<span>2015.6.17</span>
+							</a>
+						</li>
+						<li class="icon-rs">
+							<a href="http:yinpan.work/rs">
+								<h4>RS Online</h4>
+								<span>2015.6.18</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="other"></div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+<script>
+	(function(){
+		var menu =document.getElementsByClassName('menu')[0];
+		var menubox =document.getElementsByClassName('menubox')[0];
+		var main =document.getElementsByClassName('main')[0];
+		menu.onclick =function(){
+			if (menubox.style.width=='0px') {
+				menubox.style.width='80px';
+				main.style.marginLeft='80px';
+				menu.style.transform='rotate(90deg)';
+			}else{
+				menubox.style.width='0px';
+				main.style.marginLeft='0px';
+				menu.style.transform='rotate(0deg)';
+			}
+		};
+	})()
+</script>
+</body>
+</html>
