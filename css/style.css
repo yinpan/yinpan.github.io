@@ -15,7 +15,7 @@ body{
 	font-family:Lato,"Microsoft YaHei",sans-serif;
 	font-size: 1em;
 	background:transparent;
-	height:100%; 	
+	height:100%; 
 	overflow: hidden;
 }
 
@@ -25,9 +25,12 @@ body{
 	background: #16A085;
 	height: 667px;
 	float: left;
-	overflow: hidden;
 	transition: all .2s ease-out;
 	z-index: 10;
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: hidden;
 }
 .bar{
 	width: 60px;
@@ -53,10 +56,8 @@ body{
 
 
 .main{
-	background: #16A085 url(../img/body4.jpg) no-repeat 100% center;
+	background: #16A085 url(../img/body4.jpg) repeat-y 100% center;
 	position: relative;
-	width: 1366px;
-	height: 700px;
 	z-index: 5;
 	margin-left: 0px;
 	transition: all .2s ease-out;
@@ -98,13 +99,12 @@ body{
 	bottom: 9px;
 }
 
-
+.contain{
+	margin: 0 auto;
+}
 .about{
-	float: left;
-	width: 40%;
 	height: 100%;
-	margin: 0 5% 0 20%;
-
+	float: left;
 }
 .about .head{
 	margin: 0px  auto 30px;
@@ -132,40 +132,67 @@ body{
 	height: 240px;
 	margin: 10px auto;
 }
-.about .follow{
-	width: 250px;
-	margin: 0 auto;
-}
-.about .follow ul{
-	list-style: none;
-	
-}
-.about .follow ul li{
-	display: inline-block;
-	height: 37px;
-	width: 37px;
-	border-radius: 50%;
-	margin: 8px;
-	color: black;
-	transition: .4s;
-}
-.about .follow ul li img{
-	width: 32px;
-	height: 32px;
-}
-.about .follow ul li:hover{
-	background: #00C09E;
-	border-radius: 8px;
-}
 
+@media screen and (max-width:800px){
+	.contain{
+		width: 400px;
+	}
+	.about{
+		width: 400px;
+		margin: 0 auto;
+	}
+	.project{
+		width: 400px;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.menu{
+		left: 60px;
+		top: 60px;
+	}
+	body{
+		overflow-y:inherit; 
+	}
+}
+@media screen and (min-width:801px) and (max-width: 1080px) {
+	.menu{
+		left: 70px;
+		top: 70px;
+	}
+	.contain{
+		width: 800px;
+	}
+	.about{
+		width: 500px;
+		margin-right: 20px;
+	}
+	.project{
+		width: 280px;
+		padding-right: 10px;
+	}
+}
+@media screen  and (min-width: 1081px) {
+	.contain{
+		width: 1080px;
+	}
+	.about{
+		width: 550px;
+		margin: 0 5% 0 10%;
+	}
+	.project{
+		width: 340px;
+		margin-left: 25px;
+	}
+}
+.contain{
+}
 
 
 
 .project{
-	float: left;
-	width: 25%;
 	height: 100%;
-	margin: 0px;
+	float: left;
+
 }
 .project .lastest{
 	margin-top: 150px;
@@ -215,3 +242,37 @@ body{
 	background: rgba(255,255,255,.5) url(../img/online.png) top left no-repeat;
 }
 
+
+.clear{
+	clear: both;
+}
+
+
+/*follow*/
+.follow{
+	border-top: 2px dashed  red;
+	width: 300px;
+	margin: 0 auto;
+}
+.follow ul{
+	list-style: none;
+	border-radius: 26px;
+}
+.follow ul li{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	margin: 8px;
+	color: black;
+	transition: .4s;
+}
+.follow ul li img{
+	margin: 4px;
+	width: 32px;
+	height: 32px;
+}
+.follow ul li:hover{
+	background: #FFFFFF;
+	border-radius: 8px;
+}
