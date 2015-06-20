@@ -40,6 +40,7 @@
 				<div class="talk">
 					<h3>关于我\(^o^)/~</h3>
 					<br>
+					<h4>Web Front-End Designer & Developer</h4>
 					<h4>My Site:<a href="http://yinpan.work" title="my site">http://yinpan.work</a></h4>
 				</div>
 				
@@ -71,22 +72,17 @@
 				<div class="other"></div>
 			</div>
 			<div class="clear"></div>
-		</div>
-		<div class="follow">
-			<ul>
-				<li><a href="http://weibo.com/yinpan93"><i class="icon-weibo" title="Follow me on Weibo"><img src="img/weibo.png"></i></a></li>
-				<li><a href="http://yinpan.github.com"><i class="icon-github" title="Follow me on GitHub"><img src="img/github.png"></i></a></li>
-				<li><a href="#"><i class="icon-google" title="Follow me on google+"><img src="img/g+.png"></i></a></li>
-				<li><a href="#"><i class="icon-evernote" title="Follow me on evernote"><img src="img/evernote.png"></i></a></li>
-				<li><a href="#"><i class="icon-facebook" title="Follow me on facebook"><img src="img/facebook.png"></i></a></li>
-			</ul>
+			<div class="follow">
+				<ul>
+					<li><a href="http://weibo.com/yinpan93"><i class="icon-weibo" title="Follow me on Weibo"><img src="img/weibo.png"></i></a></li>
+					<li><a href="http://yinpan.github.com"><i class="icon-github" title="Follow me on GitHub"><img src="img/github.png"></i></a></li>
+					<li><a href="#"><i class="icon-google" title="Follow me on google+"><img src="img/g+.png"></i></a></li>
+					<li><a href="#"><i class="icon-evernote" title="Follow me on evernote"><img src="img/evernote.png"></i></a></li>
+					<li><a href="#"><i class="icon-facebook" title="Follow me on facebook"><img src="img/facebook.png"></i></a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
-
-
-
-
-
 
 
 
@@ -95,26 +91,25 @@
 		var menu =document.getElementsByClassName('menu')[0];
 		var menubox =document.getElementsByClassName('menubox')[0];
 		var main =document.getElementsByClassName('main')[0];
-		var viewHeight =document.documentElement.clientHeight;
-		var viewWidth =document.documentElement.clientWidth;
-		function changeDivHeight(){
-			menubox.style.height=viewHeight + "px";
-			main.style.height=viewHeight + "px";
-			main.style.width=viewWidth + "px";
-		}
-		changeDivHeight();
-		window.onresize=function(){  
-	        changeDivHeight();
-	    }
+		var menu_i=document.getElementsByClassName('menu')[0].getElementsByClassName('i');
+		menubox.style.width=='0px';
 		menu.onclick =function(){
-			if (menubox.style.width=='0px') {
+			if (menubox.style.width=='0px'||menubox.style.width=='') {
 				menubox.style.width='80px';
 				main.style.marginLeft='80px';
-				menu.style.transform='rotate(90deg)';
+				menu.style.transform='rotate(180deg)';
+				for (var i = menu_i.length - 1; i >= 0; i--) {
+				 menu_i[i].style.borderTopWidth="0px";
+				};
+				menu.style.background="rgba(111, 65, 65, 0.3) url(img/menu.png) no-repeat center center";
 			}else{
 				menubox.style.width='0px';
 				main.style.marginLeft='0px';
 				menu.style.transform='rotate(0deg)';
+				menu.style.background="rgba(111, 65, 65, 0.3)";
+				for (var i = menu_i.length - 1; i >= 0; i--) {
+					menu_i[i].style.borderTopWidth="2px";
+				};
 			}
 		};
 	})()
