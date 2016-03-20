@@ -148,6 +148,9 @@ body{
 		width: 400px;
 		margin: 0 auto;
 	}
+	.main{ 
+		height:100%;
+	}
 	.project{
 		width: 400px;
 		padding-left: 30px;
@@ -165,6 +168,9 @@ body{
 	.menu{
 		left: 70px;
 		top: 70px;
+	}
+	.main{ 
+		height:100%;
 	}
 	.contain{
 		width: 800px;
