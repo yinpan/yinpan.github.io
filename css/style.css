@@ -181,6 +181,9 @@ body{
 		width: 280px;
 		padding-right: 10px;
 	}
+	html{
+		height:100%;
+	}
 }
 @media screen  and (min-width: 1281px) {
 	.contain{
@@ -195,6 +198,9 @@ body{
 		margin-left: 25px;
 	}
 	.main{ 
+		height:100%;
+	}
+	html{
 		height:100%;
 	}
 }
